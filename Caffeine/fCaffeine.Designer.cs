@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.sendKeysTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // sendKeysTimer
+            // 
+            this.sendKeysTimer.Enabled = true;
+            this.sendKeysTimer.Interval = 45000;
+            this.sendKeysTimer.Tick += new System.EventHandler(this.sendKeysTimer_Tick);
             // 
             // fCaffeine
             // 
@@ -42,6 +50,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer sendKeysTimer;
     }
 }
 
