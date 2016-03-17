@@ -60,6 +60,7 @@ namespace Caffeine
         {
             caffeineNotifyIcon.Dispose();
             sendKeysTimer.Stop();
+            caffeineIcon.Dispose();
             this.Close();
         }
         void activeMenuItem_Click(object sender, EventArgs e)
